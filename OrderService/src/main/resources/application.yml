@@ -1,0 +1,10 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      OrderService:
+        register-health-indicator: true
+        failure-rate-threshold: 50
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-size: 10
+        wait-duration-in-open-state: 10s
+
